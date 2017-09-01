@@ -1,3 +1,19 @@
-<p>
-  search works!
-</p>
+<form #searchForm="ngForm" (ngSubmit)="searchMovies(searchFilter); searchForm.reset()">
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input [(ngModel)]= "searchFilter" #search="ngModel" name="search" type="text" required minlength="3" class="form-control" />
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary" [disabled]="!searchForm.valid">Search</button>
+
+                    <div *ngIf="search.invalid && (search.dirty || search.touched)" class="alert alert-danger">
+                        <div *ngIf="search.errors.required">
+                         First name is required.
+                        </div>
+                        <div *ngIf="search.errors.minlength">
+                          You must have at least 3 characters long.
+                        </div>
+                     </div>
+            </span>
+        </div>
+    </div>
+</form>
