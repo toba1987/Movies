@@ -7,12 +7,14 @@ import { MoviesComponent } from './components/movies/movies.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule} from './shared/shared.module';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     MoviesComponent,
+    SearchComponent,
 
   ],
   imports: [
