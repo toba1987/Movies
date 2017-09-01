@@ -6,6 +6,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { MoviesComponent } from './components/movies/movies.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      SharedModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
