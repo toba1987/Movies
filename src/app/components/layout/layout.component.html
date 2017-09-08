@@ -3,14 +3,6 @@
         <li class="nav-item">
             <a class="nav-link" routerLink="/movies" routerLinkActive="active">Movies</a>
         </li>
-     <!--   <li class="nav-item">
-            <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
-        </li>
-    </ul>
-    <ul class="navBar-nav mx-auto">
-        <li class="nav-item">
-            {{ title }}
-        </li>-->
     </ul>
     <app-search #searchForm (onSubmit)="searchMovies($event)"></app-search>
 </nav>

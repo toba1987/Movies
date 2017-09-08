@@ -11,8 +11,8 @@ export class SearchComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-    searchMovies(movie: Movie){
-        this.router.navigate(['search', movie])
+    searchMovies(movie: string){
+        this.router.navigate(['search', movie]);
 
     }
 
